@@ -1,0 +1,8 @@
+public class Screen {
+  public void show() {
+    System.out.println("Select one...\n 1. Select drink\n2.Charge your money\n3.Close the menu");
+  }
+  public void ask() {
+    System.out.println("Keep going?\nYes : 1 / No: 0")
+  }
+}
