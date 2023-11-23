@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class Zapangi {
+  public static void main(String args[]) {
+    Scanner scan = new Scanner(System.in);
+
+    Screen screen = new Screen();
+    Selector sel = new Selector();
+    Changer cha = new Changer();
+
+    int c;
+    boolean t = true;
+
+    while (t) {
+      screen.show();
+      c = scan.nextInt();
+      if (c == 1) {
+        if (cha.money == 0) {
+            cha.charge_message();
+            c = scan.nextInt();
+            cha.charge(c);
+        }
+        sel.choice();
+        c = scan.nextInt();
+        cha.cal(c);
+        cha.change();
+        screen.ask();
+        c = scan.nextInt();
+        if (c == 0) break;
+        c = 0;
+      }
+      if (c == 2) {
+          cha.charge_message();
+          c = scan.nextInt();
+          cha.charge(c);
+          screen.ask();
+          c = scan.nextInt();
+          if (c == 0) break;
+          c = 0;
+      }
+    if (c == 3 ) t = false;
+    }
+  }
+}
