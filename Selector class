@@ -1,0 +1,10 @@
+public class Selector {
+  public Selector() {}
+  public void choice() {
+    System.out.println("자판기 테스트");
+    System.out.println("-------------------------------");
+    System.out.println("1.콜라(600), 2.환타(550), 3.물(370), 4.커피(420)");
+    System.out.println("-------------------------------");
+    System.out.println();
+  }
+}
