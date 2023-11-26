@@ -1,0 +1,72 @@
+public class Changer {
+  int money = 0;
+
+  public void cal (int n) {
+    if (n == 1) {
+      money -= 600;
+      if (money < 0) {
+          money += 600;
+          System.out.println("You have less money than the cost. Please choose other drink.");
+        }
+      }
+      else if (n == 2) {
+        money -= 550;
+      if (money < 0) {
+          money += 550;
+          System.out.println("You have less money than the cost. Please choose other drink.");
+        }
+      }
+      else if (n == 3) {
+        money -= 370;
+      if (money < 0) {
+          money += 370;
+          System.out.println("You have less money than the cost. Please choose other drink.");
+        }
+      }
+      else if (n == 4) {
+        money -= 420;
+      if (money < 0) {
+          money += 420;
+          System.out.println("You have less money than the cost. Please choose other drink.");
+        }
+      }
+    }
+
+    public void charge_message() {
+      System.out.println("Insert money, Please.");
+      System.out.println("How much : ");
+    }
+    public void charge(int n) {
+      money += n;
+    }
+    public void charge() {
+      int x[] = new int[4];
+      x[0] = money / 1000;
+      x[1] = (money - 1000 * x[0]) / 500;
+      x[2] = (money - 1000 * x[0] - 500 * x[1]) / 100;
+      x[3] = (money - 1000 * x[0] - 500 * x[1] - 100 * x[2]) / 10;
+      System.out.println("Change : " + money + " 원");
+      System.out.println("1000원" + x[0] + "장");
+      System.out.println("500원" + x[1] + "개");
+      System.out.println("100원" + x[2] + "개");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
